@@ -4,7 +4,7 @@ import com.thoughtworks.ddd.domain.Cart;
 import com.thoughtworks.ddd.domain.Item;
 import com.thoughtworks.ddd.domain.Product;
 
-public class Main {
+public class ShoppingCartApplication {
 
     public static void main(String[] args) {
         Cart cart = new Cart();
@@ -25,5 +25,6 @@ public class Main {
         cart.remove(iPadProItem);
 
         System.out.println(cart.getItems());
+        System.out.println(cart.getDeletedItems());
     }
 }
