@@ -39,4 +39,17 @@ public class CartTest {
 
         Assert.assertEquals(item, cart.getDeletedItems().get(0));
     }
+
+    @Test
+    public void shouldDifferentiateTwoCartsWithSameItems() {
+        Product product = new Product("dummy Item");
+        Item item = new Item(product);
+        Cart cart1 = new Cart();
+        Cart cart2 = new Cart();
+
+        cart1.add(item);
+        cart2.add(item);
+
+        Assert.assertNotEquals(cart1, cart2);
+    }
 }
