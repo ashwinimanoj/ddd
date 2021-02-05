@@ -1,15 +1,15 @@
 package com.thoughtworks.ddd.domain;
 
-public class CartItem {
+public class Item {
 
     Product product;
     Integer quantity;
 
-    public CartItem(Product product) {
+    public Item(Product product) {
         this(product, 1);
     }
 
-    public CartItem(Product product, Integer quantity) {
+    public Item(Product product, Integer quantity) {
         this.product = product;
         this.quantity = quantity;
     }
