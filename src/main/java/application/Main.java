@@ -1,6 +1,7 @@
 package application;
 
 import com.thoughtworks.ddd.domain.Cart;
+import com.thoughtworks.ddd.domain.CartItem;
 import com.thoughtworks.ddd.domain.Product;
 
 public class Main {
@@ -9,10 +10,12 @@ public class Main {
         Cart cart = new Cart();
         Product ipadPro = new Product("IPad Pro");
         Product heroInkPen = new Product("Hero Ink Pen");
+        Product gmCricketBat = new Product("GM Cricket Bat");
 
-        cart.add(ipadPro);
-        cart.add(heroInkPen);
+        cart.add(new CartItem(ipadPro));
+        cart.add(new CartItem(heroInkPen));
+        cart.add(new CartItem(gmCricketBat, 2));
 
-        System.out.println(cart.getProducts());
+        System.out.println(cart.getCartItems());
     }
 }
