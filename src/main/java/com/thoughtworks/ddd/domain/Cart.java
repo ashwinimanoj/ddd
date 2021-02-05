@@ -10,7 +10,7 @@ public class Cart {
         products = new ArrayList<>();
     }
 
-    public void addProduct(Product product) {
+    public void add(Product product) {
         products.add(product);
     }
 

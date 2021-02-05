@@ -7,9 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
         Cart cart = new Cart();
-        Product product = new Product("IPad Pro");
+        Product ipadPro = new Product("IPad Pro");
+        Product heroInkPen = new Product("Hero Ink Pen");
 
-        cart.addProduct(product);
+        cart.add(ipadPro);
+        cart.add(heroInkPen);
 
         System.out.println(cart.getProducts());
     }
