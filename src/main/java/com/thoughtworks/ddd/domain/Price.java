@@ -11,8 +11,12 @@ public class Price {
         this.currency = currency;
     }
 
-    public void add(double amount) {
-        this.amount = amount;
+    public double getAmount() {
+        return amount;
+    }
+
+    public Currency getCurrency() {
+        return currency;
     }
 
     @Override
