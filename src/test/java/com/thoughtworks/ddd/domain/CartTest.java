@@ -3,12 +3,14 @@ package com.thoughtworks.ddd.domain;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Currency;
+
 public class CartTest {
 
     @Test
     public void shouldAddItemToCart() {
         Cart cart = new Cart();
-        Product product = new Product("dummy Item");
+        Product product = new Product("dummy Item", new Price(100.0, Currency.getInstance("INR")));
         Item item = new Item(product);
 
         cart.add(item);
@@ -19,7 +21,7 @@ public class CartTest {
     @Test
     public void shouldRemoveItemAsCart() {
         Cart cart = new Cart();
-        Product product = new Product("dummy Item");
+        Product product = new Product("dummy Item", new Price(600.0, Currency.getInstance("INR")));
         Item item = new Item(product);
 
         cart.add(item);
@@ -31,7 +33,7 @@ public class CartTest {
     @Test
     public void shouldReturnListOfRemovedCart() {
         Cart cart = new Cart();
-        Product product = new Product("dummy Item");
+        Product product = new Product("dummy Item", new Price(10.0, Currency.getInstance("INR")));
         Item item = new Item(product);
 
         cart.add(item);
@@ -42,7 +44,7 @@ public class CartTest {
 
     @Test
     public void shouldDifferentiateTwoCartsWithSameItems() {
-        Product product = new Product("dummy Item");
+        Product product = new Product("dummy Item", new Price(10.0, Currency.getInstance("INR")));
         Item item = new Item(product);
         Cart cart1 = new Cart();
         Cart cart2 = new Cart();
