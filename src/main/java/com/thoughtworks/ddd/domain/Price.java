@@ -11,6 +11,10 @@ public class Price {
         this.currency = currency;
     }
 
+    public void add(double amount) {
+        this.amount = amount;
+    }
+
     @Override
     public String toString() {
         return "Price{" +
