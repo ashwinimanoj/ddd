@@ -3,18 +3,18 @@ package com.thoughtworks.ddd.domain;
 import java.util.Currency;
 
 public class Price {
-    double value;
-    Currency currency;
+    private double amount;
+    private Currency currency;
 
-    public Price(double value, Currency currency) {
-        this.value = value;
+    public Price(double amount, Currency currency) {
+        this.amount = amount;
         this.currency = currency;
     }
 
     @Override
     public String toString() {
         return "Price{" +
-                "value=" + value +
+                "value=" + amount +
                 ", currency=" + currency +
                 '}';
     }
